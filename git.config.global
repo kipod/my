@@ -1,0 +1,39 @@
+[user]
+	name = Nikolay Chernov
+	email = n_chernov@wargaming.net
+[core]
+	autocrlf = false
+	editor = vi
+	excludesfile = C:\\Users\\n_chernov\\Documents\\gitignore_global.txt
+	safecrlf = false
+[alias]
+    	ci = commit
+    	co = checkout
+    	st = status
+    	br = branch
+    	hist = log --pretty=format:\"%Cred%h %Creset%ad %Cred| [%an] | %Cgreen%s%d\" --graph --date=short --color
+    	lg = log --all --graph --date=relative --pretty=format:\"%C(auto)%h%x09 %ad%x09 | %s %d %C(bold blue)<%an>\"
+[color]
+    	ui = true
+[push]
+	default = matching
+[credential]
+	helper = !'C:\\Users\\n_chernov\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+[merge]
+	tool = tortoisemerge
+[mergetool]
+	prompt = false
+	keepTemporaries = false
+[difftool "winmerge"]
+	path = T:/WinMerge/WinMergeU.exe
+	trustExitCode = false
+	cmd = /t/WinMerge/winmerge.sh "$LOCAL" "$REMOTE"
+[diff]
+	tool = winmerge
+	guitool = tortoisemerge
+[difftool]
+	prompt = false
+[gui]
+	recentrepo = S:/My/Git/casablanca
+[http]
+	postBuffer = 300000000
