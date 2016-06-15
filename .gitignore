@@ -1,0 +1,6 @@
+*.sdf
+*.VC.opendb
+**/Debug/*.*
+**/ipch/**
+**/.vs/**
+*.vcxproj.filters
