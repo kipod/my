@@ -4,3 +4,6 @@
 **/ipch/**
 **/.vs/**
 *.vcxproj.filters
+
+**/packages/**
+**/obj/**
