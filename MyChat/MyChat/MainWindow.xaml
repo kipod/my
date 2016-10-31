@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyChat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowStyle="ToolWindow">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="0,296,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="442" RenderTransformOrigin="0.529,1.356"/>
-        <Button x:Name="buttonSend" Content="Button" HorizontalAlignment="Left" Margin="442,296,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="296" Width="517"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="432*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textBox" Height="23" Margin="0,0,-1,0" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" RenderTransformOrigin="0.529,1.356" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
+        <Button x:Name="buttonSend" Content="Send" Margin="1,0,0,0" VerticalAlignment="Bottom" Height="23" Click="buttonSend_Click" Grid.Column="1" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" IsDefault="True"/>
+        <DataGrid x:Name="dataGrid" Grid.ColumnSpan="2" Margin="0,0,0,23" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" GridLinesVisibility="None" HeadersVisibility="None"/>
 
     </Grid>
 </Window>
