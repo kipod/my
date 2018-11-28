@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.model.Person;
 import sample.util.DateUtil;
@@ -44,6 +45,7 @@ public class PersonEditDialogController {
      */
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
+        this.dialogStage.getIcons().add(new Image("images/main.png"));
     }
 
     /**
